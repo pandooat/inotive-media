@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="441" height="143" viewBox="0 0 441 143" role="img" aria-label="Inotive Media">
+  <title>Inotive Media</title>
+  <!-- Monochrome wordmark. Pure white on transparent, matching the header. -->
+  <g fill="#FFFFFF">
+    <!-- Mark: "IM" monogram in a rounded square outline -->
+    <rect x="6" y="34" width="66" height="66" rx="16" fill="none" stroke="#FFFFFF" stroke-width="4"/>
+    <text x="39" y="78" text-anchor="middle"
+          font-family="Urbanist, Manrope, Helvetica, Arial, sans-serif"
+          font-size="30" font-weight="700" letter-spacing="-1">IM</text>
+
+    <!-- Wordmark: Inotive Media -->
+    <text x="90" y="79"
+          font-family="Urbanist, Manrope, Helvetica, Arial, sans-serif"
+          font-size="40" font-weight="600" letter-spacing="-1.4">Inotive Media</text>
+  </g>
+</svg>

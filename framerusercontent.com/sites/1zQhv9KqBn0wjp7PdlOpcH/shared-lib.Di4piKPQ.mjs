@@ -1,0 +1,2 @@
+﻿import{t as e}from"./rolldown-runtime.Dh6celcD.mjs";function t(e,t){return{description:`Design agency`,favicon:`https://framerusercontent.com/assets/J5zIujskVlXrld9VOBx1vMwllEQ.png`,robots:`max-image-preview:large`,socialImage:`https://framerusercontent.com/assets/bjNwtppAquaU07c9OPFjkrmfA.png`,title:`Inotive Media`}}var n=e((()=>{}));export{t as n,n as t};
+//# sourceMappingURL=shared-lib.Di4piKPQ.mjs.map

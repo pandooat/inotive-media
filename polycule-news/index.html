@@ -1,0 +1,153 @@
+<!doctype html>
+<html dir="ltr" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Polycule — Case Study — Inotive Media</title>
+<meta name="description" content="Polycule.news is a modern news identity built around clarity, connection, and the flow of information.">
+<link rel="icon" href="../framerusercontent.com/images/inotive-favicon.svg">
+<style>
+:root{
+  --bg:#0a0a0a;--fg:#f5f5f5;--muted:#8a8a8a;--dim:#6c6c6c;--line:#262626;
+  --card:#141414;--accent:#d4d4d4;
+  --font:"Urbanist","Manrope",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--bg);color:var(--fg);-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{font-family:var(--font);line-height:1.65;background:var(--bg);color:var(--fg)}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%;height:auto}
+::selection{background:#d4d4d4;color:#0a0a0a}
+.wrap{max-width:1120px;margin:0 auto;padding:0 32px}
+header{position:sticky;top:0;z-index:20;background:rgba(10,10,10,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.hd{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:600;letter-spacing:-.02em;font-size:19px}
+.mark{width:30px;height:30px;border-radius:8px;background:#f5f5f5;color:#0a0a0a;display:grid;place-items:center;font-size:12px;font-weight:700}
+.nav{display:flex;gap:28px;align-items:center;font-size:15px;color:var(--muted)}
+.nav a:hover{color:var(--fg)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 20px;border-radius:30px;background:#f5f5f5;color:#0a0a0a;font-weight:600;font-size:14px;border:1px solid #f5f5f5;transition:.18s}
+.btn:hover{background:var(--accent);border-color:var(--accent)}
+.hero{padding:78px 0 44px}
+.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);margin-bottom:20px;font-weight:600}
+h1{font-size:clamp(40px,6vw,76px);line-height:1.03;letter-spacing:-.035em;font-weight:600;max-width:18ch}
+.lede{font-size:clamp(16px,1.8vw,20px);color:var(--muted);max-width:62ch;margin-top:24px}
+.hero-img{margin:44px 0 0;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:var(--card)}
+.hero-img img{width:100%;aspect-ratio:16/9;object-fit:cover;filter:grayscale(1) contrast(1.03)}
+.meta{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:52px 0 8px}
+.meta div{background:var(--bg);padding:20px}
+.meta dt{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin-bottom:8px;font-weight:600}
+.meta dd{font-size:15px;color:var(--fg)}
+section.blk{padding:72px 0;border-top:1px solid var(--line)}
+.sec-n{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);font-weight:600;margin-bottom:18px}
+h2{font-size:clamp(28px,3.6vw,44px);line-height:1.1;letter-spacing:-.03em;font-weight:600;max-width:22ch;margin-bottom:28px}
+.prose{max-width:68ch;display:flex;flex-direction:column;gap:18px}
+.prose p{font-size:clamp(15.5px,1.7vw,18px);color:#c9c9c9}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:40px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px}
+.card h3{font-size:17px;font-weight:600;letter-spacing:-.01em;margin-bottom:10px}
+.card p{font-size:14.5px;color:var(--muted)}
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:40px}
+.gallery figure{border-radius:16px;overflow:hidden;border:1px solid var(--line);background:var(--card)}
+.gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;filter:grayscale(1) contrast(1.03)}
+.gallery figcaption{padding:14px 16px;font-size:13px;color:var(--dim);border-top:1px solid var(--line)}
+.note{margin-top:34px;padding:18px 20px;border:1px solid var(--line);border-radius:12px;font-size:13.5px;color:var(--dim);max-width:80ch}
+.pager{display:flex;justify-content:space-between;gap:16px;padding:34px 0;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+.pager a:hover{color:var(--fg)}
+footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-size:13.5px}
+.ft{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+.ft a:hover{color:var(--fg)}
+@media(max-width:880px){
+  .nav{display:none}
+  .wrap{padding:0 20px}
+  .meta{grid-template-columns:repeat(2,1fr)}
+  .cards,.gallery{grid-template-columns:1fr}
+  .hero{padding:52px 0 30px}
+  section.blk{padding:52px 0}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap hd">
+    <a class="brand" href="../"><span class="mark">IM</span> Inotive Media</a>
+    <nav class="nav">
+      <a href="../#services">Services</a>
+      <a href="../#projects">Work</a>
+      <a href="../#pricing">Pricing</a>
+    </nav>
+    <a class="btn" href="../get-in-touch/">Get in touch</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <p class="eyebrow">Brand Identity</p>
+    <h1>A new perspective on everyday news.</h1>
+    <p class="lede">Polycule.news is a modern news identity built around clarity, connection, and the flow of information.</p>
+    <div class="hero-img"><img src="../framerusercontent.com/images/DoIm1i3bb8QQCju7NJ8nNCh5IQ.png" alt="Polycule.news identity" width="1200" height="675" loading="eager"></div>
+    <dl class="meta"><div><dt>Services</dt><dd>Brand Identity, Motion Design</dd></div>
+<div><dt>Industry</dt><dd>Media, News</dd></div>
+<div><dt>Year</dt><dd>2026</dd></div>
+<div><dt>Timeline</dt><dd>4 weeks</dd></div></dl>
+  </section><section class="blk">
+<p class="sec-n">01 — The Challenge</p>
+<h2>Create a visual identity that feels credible enough for news, but fresh enough for a new generation of readers.</h2>
+<div class="prose">
+<p>Create a visual identity that feels credible enough for news, but fresh enough for a new generation of readers.</p>
+<p>The brand had to signal authority without the visual conventions that make news brands feel interchangeable.</p>
+</div></section>
+
+<section class="blk">
+<p class="sec-n">02 — The Process</p>
+<h2>Designing beyond individual screens.</h2>
+<div class="prose">
+<p>Clarity in every story. We built the identity around readable typography and a structure that scales from a headline to a full page.</p>
+<p>Bold. Connected. Intelligent. The system is designed for screens, stories, and everything between.</p>
+<p>Connection became the organising idea: how stories relate, and how readers move between them.</p>
+</div>
+<div class="cards">
+<div class="card"><h3>Clarity in every story</h3><p>Readable typography that scales from headline to full page.</p></div>
+<div class="card"><h3>Bold. Connected. Intelligent.</h3><p>The system is designed for screens, stories, and everything between.</p></div>
+<div class="card"><h3>Identity in Motion</h3><p>Holding together in static layouts and animated content.</p></div>
+<div class="card"><h3>A modern news identity</h3><p>Built around clarity, connection, and the flow of information.</p></div>
+</div></section>
+
+<section class="blk">
+<p class="sec-n">03 — The Result</p>
+<h2>Extending the product language beyond the app.</h2>
+<div class="prose">
+<p>Identity in Motion: the brand holds together in static layouts and in animated news content.</p>
+<p>Designed for screens, stories, and everything between, so the identity survives every surface the newsroom uses.</p>
+<p>The result is a news brand built for how people actually read today.</p>
+</div></section>
+
+<section class="blk">
+<p class="sec-n">04 — Gallery</p>
+<h2>Selected frames.</h2>
+<div class="gallery">
+<figure><img src="../framerusercontent.com/images/DoIm1i3bb8QQCju7NJ8nNCh5IQ.png" alt="Polycule.news identity" loading="lazy"><figcaption>Polycule.news identity</figcaption></figure>
+<figure><img src="../framerusercontent.com/images/6Sqf4aB0KxFRfYIjiQ5bp3on5I.png" alt="Polycule.news wordmark" loading="lazy"><figcaption>Polycule.news wordmark</figcaption></figure>
+<figure><img src="../framerusercontent.com/images/EBl0hvxW6pSZ3aQUxm0kXIe0PRY.png" alt="Polycule.news application" loading="lazy"><figcaption>Polycule.news application</figcaption></figure>
+<figure><img src="../framerusercontent.com/images/Hq1YR3MRc36OuMZlYz1Pc2tqA.png" alt="Polycule.news detail" loading="lazy"><figcaption>Polycule.news detail</figcaption></figure>
+<figure><img src="../framerusercontent.com/images/rsHQcDvvaLNtvT8HSb9oh2EcGc.png" alt="Polycule.news visual" loading="lazy"><figcaption>Polycule.news visual</figcaption></figure>
+<figure><img src="../framerusercontent.com/images/tGOCADUfVr5SI1dKzt4qk7J6gjQ.png" alt="Polycule.news social" loading="lazy"><figcaption>Polycule.news social</figcaption></figure>
+</div>
+<div class="note">Project copy on this page is taken from the original Inotive Media project source. This page is a static rebuild of that case study.</div>
+</section>
+
+  <div class="pager">
+    <a href="../">&larr; Back to home</a>
+    <a href="../get-in-touch/">Start a project &rarr;</a>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap ft">
+    <span>&copy; 2026 Inotive Media. All rights reserved.</span>
+    <span><a href="mailto:itdivision00@gmail.com">itdivision00@gmail.com</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

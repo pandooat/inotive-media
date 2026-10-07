@@ -1,0 +1,284 @@
+<!doctype html>
+<html dir="ltr" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — Inotive Media</title>
+<meta name="description" content="Start a project with Inotive Media. Tell us what you are building and we will reply within two working days.">
+<link rel="icon" href="../framerusercontent.com/images/inotive-favicon.svg">
+<style>
+:root{
+  --bg:#0a0a0a; --fg:#f5f5f5; --muted:#8a8a8a; --dim:#6c6c6c; --line:#262626;
+  --card:#141414; --accent:#d4d4d4; --err:#e5e5e5;
+  --font:"Urbanist","Manrope",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--bg);color:var(--fg);-webkit-font-smoothing:antialiased}
+body{font-family:var(--font);line-height:1.6;background:var(--bg);color:var(--fg);min-height:100vh}
+a{color:inherit;text-decoration:none}
+::selection{background:#d4d4d4;color:#0a0a0a}
+.wrap{max-width:1120px;margin:0 auto;padding:0 32px}
+
+header{position:sticky;top:0;z-index:20;background:rgba(10,10,10,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.hd{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:600;letter-spacing:-.02em;font-size:19px}
+.mark{width:30px;height:30px;border-radius:8px;background:#f5f5f5;color:#0a0a0a;display:grid;place-items:center;font-size:12px;font-weight:700}
+.nav{display:flex;gap:28px;align-items:center;font-size:15px;color:var(--muted)}
+.nav a:hover{color:var(--fg)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 20px;border-radius:30px;background:#f5f5f5;color:#0a0a0a;font-weight:600;font-size:14px;border:1px solid #f5f5f5;transition:.18s;cursor:pointer;font-family:inherit}
+.btn:hover{background:var(--accent);border-color:var(--accent)}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
+
+.hero{padding:80px 0 44px}
+.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);margin-bottom:20px;font-weight:600}
+h1{font-size:clamp(38px,5.6vw,68px);line-height:1.05;letter-spacing:-.035em;font-weight:600;max-width:16ch}
+.sub{font-size:clamp(16px,1.7vw,19px);color:var(--muted);max-width:58ch;margin-top:22px}
+
+.layout{display:grid;grid-template-columns:1.35fr .95fr;gap:56px;padding:24px 0 96px;align-items:start}
+
+form{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:34px}
+.field{margin-bottom:22px}
+.field:last-of-type{margin-bottom:26px}
+label{display:block;font-size:13px;font-weight:600;letter-spacing:.02em;margin-bottom:9px;color:#d4d4d4}
+label .req{color:#a3a3a3;font-weight:400}
+input,select,textarea{
+  width:100%;padding:13px 15px;border-radius:11px;background:#0e0e0e;color:var(--fg);
+  border:1px solid var(--line);font-family:inherit;font-size:15px;line-height:1.5;
+  transition:border-color .18s,background .18s;outline:none;
+}
+input::placeholder,textarea::placeholder{color:#5c5c5c}
+input:focus,select:focus,textarea:focus{border-color:#5c5c5c;background:#121212}
+select{appearance:none;cursor:pointer;
+  background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%238a8a8a' stroke-width='2.5' stroke-linecap='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 15px center;padding-right:42px;
+}
+select option{background:#141414;color:#f5f5f5}
+textarea{resize:vertical;min-height:132px}
+.field.invalid input,.field.invalid select,.field.invalid textarea{border-color:var(--err)}
+.err{display:none;font-size:12.5px;color:var(--err);margin-top:7px}
+.field.invalid .err{display:block}
+
+.form-foot{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.hint{font-size:12.5px;color:var(--dim);line-height:1.5;max-width:30ch}
+
+.side h3{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);font-weight:600;margin-bottom:18px}
+.side-list{list-style:none;display:flex;flex-direction:column;gap:1px;margin-bottom:32px}
+.side-list li{padding:13px 0;border-bottom:1px solid var(--line);font-size:14.5px;display:flex;justify-content:space-between;gap:14px}
+.side-list li span:last-child{color:var(--muted);text-align:right}
+.wa-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
+.wa-card p{font-size:14px;color:var(--muted);line-height:1.6}
+.wa-card strong{color:var(--fg);font-weight:600;display:block;margin-bottom:6px;font-size:14.5px}
+.wa-num{margin-top:14px;font-size:15px;letter-spacing:.01em;color:var(--fg);word-break:break-all}
+
+.pager{display:flex;justify-content:space-between;gap:16px;padding:30px 0;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+.pager a:hover{color:var(--fg)}
+footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-size:13.5px}
+.ft{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+.ft a:hover{color:var(--fg)}
+
+.toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,140%);background:#f5f5f5;color:#0a0a0a;
+  padding:14px 22px;border-radius:12px;font-size:14px;font-weight:600;z-index:60;transition:transform .32s cubic-bezier(.2,.8,.3,1);
+  box-shadow:0 14px 40px rgba(0,0,0,.55);max-width:90vw;text-align:center}
+.toast.show{transform:translate(-50%,0)}
+
+@media(max-width:880px){
+  .nav{display:none}
+  .wrap{padding:0 20px}
+  .layout{grid-template-columns:1fr;gap:36px;padding-bottom:64px}
+  .hero{padding:56px 0 32px}
+  form{padding:24px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap hd">
+    <a class="brand" href="../"><span class="mark">IM</span> Inotive Media</a>
+    <nav class="nav">
+      <a href="../#services">Services</a>
+      <a href="../#projects">Work</a>
+      <a href="../#pricing">Pricing</a>
+    </nav>
+    <a class="btn" href="../#projects">View our work</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <p class="eyebrow">Start a Conversation</p>
+    <h1>Tell us what you are building.</h1>
+    <p class="sub">Fill in the form and we will open WhatsApp with your message ready to send. Every serious enquiry gets a reply within two working days.</p>
+  </section>
+
+  <div class="layout">
+    <form id="waForm" novalidate>
+      <div class="field">
+        <label for="f-name">Name <span class="req">(required)</span></label>
+        <input type="text" id="f-name" name="name" placeholder="Your full name" autocomplete="name" required>
+        <p class="err" id="e-name">Please enter your name.</p>
+      </div>
+
+      <div class="field">
+        <label for="f-email">Email <span class="req">(required)</span></label>
+        <input type="email" id="f-email" name="email" placeholder="you@company.com" autocomplete="email" required>
+        <p class="err" id="e-email">Please enter a valid email address.</p>
+      </div>
+
+      <div class="field">
+        <label for="f-phone">WhatsApp / Phone <span class="req">(required)</span></label>
+        <input type="tel" id="f-phone" name="phone" placeholder="e.g. 0812 3456 7890" autocomplete="tel" required>
+        <p class="err" id="e-phone">Please enter your WhatsApp number.</p>
+      </div>
+
+      <div class="field">
+        <label for="f-service">Service <span class="req">(required)</span></label>
+        <select id="f-service" name="service">
+          <option value="">Select a service</option>
+          <option>UI/ UX Design</option>
+          <option>Brand Identity</option>
+          <option>Website Design</option>
+          <option>Product Design</option>
+          <option>Motion Design</option>
+          <option>Digital Strategy</option>
+          <option>Other</option>
+        </select>
+        <p class="err" id="e-service">Please select a service.</p>
+      </div>
+
+      <div class="field">
+        <label for="f-message">Message <span class="req">(required)</span></label>
+        <textarea id="f-message" name="message" placeholder="Tell us about your project, timeline and budget range." required></textarea>
+        <p class="err" id="e-message">Please write a short message.</p>
+      </div>
+
+      <div class="form-foot">
+        <button type="submit" class="btn" id="submitBtn">Send via WhatsApp</button>
+        <p class="hint">This opens WhatsApp with your message pre-filled. Nothing is sent until you press send there.</p>
+      </div>
+    </form>
+
+    <aside class="side">
+      <h3>What happens next</h3>
+      <ul class="side-list">
+        <li><span>Discovery call</span><span>~30 min</span></li>
+        <li><span>Scope &amp; quote</span><span>1–2 days</span></li>
+        <li><span>Fixed timeline</span><span>1–2 days</span></li>
+        <li><span>Reply time</span><span>2 working days</span></li>
+      </ul>
+
+      <div class="wa-card">
+        <strong>Prefer email?</strong>
+        <p>You can also reach us directly at the address below.</p>
+        <p class="wa-num">itdivision00@gmail.com</p>
+      </div>
+
+      <div class="wa-card" style="margin-top:16px">
+        <strong>WhatsApp</strong>
+        <p>Your message opens in WhatsApp and stays editable before you send it.</p>
+        <p class="wa-num">+62 896-1977-6900</p>
+      </div>
+    </aside>
+  </div>
+
+  <div class="pager">
+    <a href="../">&larr; Back to home</a>
+    <a href="../#projects">See our work &rarr;</a>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap ft">
+    <span>&copy; 2026 Inotive Media. All rights reserved.</span>
+    <span><a href="mailto:itdivision00@gmail.com">itdivision00@gmail.com</a></span>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+(function () {
+  var WA_NUMBER = "6289619776900";
+
+  var form = document.getElementById("waForm");
+  var toast = document.getElementById("toast");
+  var btn = document.getElementById("submitBtn");
+
+  var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+  function showToast(msg) {
+    toast.textContent = msg;
+    toast.classList.add("show");
+    clearTimeout(showToast._t);
+    showToast._t = setTimeout(function () { toast.classList.remove("show"); }, 4200);
+  }
+
+  function setInvalid(id, bad) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    el.closest(".field").classList.toggle("invalid", bad);
+  }
+
+  function buildMessage(d) {
+    var lines = [];
+    lines.push("Hello Inotive Media,");
+    lines.push("");
+    lines.push("Name: " + d.name);
+    lines.push("Email: " + d.email);
+    lines.push("WhatsApp / Phone: " + d.phone);
+    if (d.service) lines.push("Service: " + d.service);
+    lines.push("");
+    lines.push("Message:");
+    lines.push(d.message);
+    return lines.join("\n");
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    var name = document.getElementById("f-name").value.trim();
+    var email = document.getElementById("f-email").value.trim();
+    var phone = document.getElementById("f-phone").value.trim();
+    var service = document.getElementById("f-service").value;
+    var message = document.getElementById("f-message").value.trim();
+
+    var badName = name.length === 0;
+    var badEmail = !EMAIL_RE.test(email);
+    var badPhone = phone.length === 0;
+    var badMessage = message.length === 0;
+    var badService = service.length === 0;
+
+    setInvalid("f-name", badName);
+    setInvalid("f-email", badEmail);
+    setInvalid("f-phone", badPhone);
+    setInvalid("f-message", badMessage);
+    setInvalid("f-service", badService);
+
+    if (badName || badEmail || badPhone || badService || badMessage) {
+      var first = badName ? "f-name" : badEmail ? "f-email" : badPhone ? "f-phone" : badService ? "f-service" : "f-message";
+      document.getElementById(first).focus();
+      showToast("Please complete all required fields.");
+      return;
+    }
+
+    var text = buildMessage({ name: name, email: email, phone: phone, service: service, message: message });
+    var url = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(text);
+
+    btn.disabled = true;
+    var win = window.open(url, "_blank", "noopener");
+    if (!win) { window.location.href = url; }
+    showToast("Opening WhatsApp with your message ready to send.");
+    setTimeout(function () { btn.disabled = false; }, 1200);
+  });
+
+  ["f-name", "f-email", "f-phone", "f-message"].forEach(function (id) {
+    document.getElementById(id).addEventListener("input", function () { setInvalid(id, false); });
+  });
+  document.getElementById("f-service").addEventListener("change", function () {
+    setInvalid("f-service", false);
+  });
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+# Dependencies (only used for local testing)
+node_modules/
+package.json
+package-lock.json
+
+# Local tooling / working files
+.dsh-vision-toolkit/
+.playwright-mcp/
+
+# Source material kept locally, never deployed
+Featured Work/
+
+# Scratch scripts and tests
+_*.ps1
+_*.js
+
+# Editor / OS noise
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Vercel
+.vercel
