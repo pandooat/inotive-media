@@ -2,6 +2,13 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
   "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/get-in-touch",
+      "destination": "/get-in-touch/",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/framerusercontent.com/(.*)",
