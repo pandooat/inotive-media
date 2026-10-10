@@ -11,7 +11,25 @@
   ],
   "headers": [
     {
-      "source": "/framerusercontent.com/(.*)",
+      "source": "/framerusercontent.com/sites/(.*)/script_main.(.*).mjs",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+      ]
+    },
+    {
+      "source": "/framerusercontent.com/sites/(.*)/inotive-empty-route.mjs",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+      ]
+    },
+    {
+      "source": "/framerusercontent.com/images/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/framerusercontent.com/assets/(.*)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
       ]
